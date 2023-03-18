@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello fastApi</h1>
+    <div id="hhh"></div>
+    <script>
+        const data = { username: "example" };
+
+        fetch("http://127.0.0.1:8000/", {
+        method: "POST", // or 'PUT'
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Success:", data);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            
+        });
+        // let xhr = new XMLHttpRequest();
+        // xhr.open("POST", "http://127.0.0.1:8000/");
+        // xhr.setRequestHeader("Accept", "application/json");
+        // xhr.setRequestHeader("Content-Type", "Content-Type: application/json");
+        // let data = {
+        //   "user": "striiing"
+        // };
+        // xhr.send(JSON.stringify(data));
+        // document.getElementById("")
+        // xhr.response()
+    </script>
+</body>
+</html>
